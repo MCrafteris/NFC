@@ -2,9 +2,9 @@
 <html lang="lt">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MCrafteris</title>
   <style>
@@ -14,7 +14,7 @@
       color: #111;
       margin: 0;
       padding: 0;
-      text-align: center;My Project 17970
+      text-align: center;
     }
 
     header {
@@ -94,7 +94,7 @@
     </div>
 
     <div class="subscribers" id="subscriber-count">
-      Įkeliama sekėjų skaičius...
+      Įėjimas sekėjų skaičiui...
     </div>
 
     <div class="below">
@@ -110,12 +110,12 @@
 
   <script>
     async function fetchSubscribers() {
-      const apiKey = 'AIzaSyAwV2EVGLkuoIHQncbJQVm3pB209BhmaNE';
+      const apiKey = 'AIzaSyAwV2EVGLkuoIHQncbJQVm3pB209BhmaNE'; // Čia įdėk savo tikrą API raktą
       const channelId = 'UCIWuIezxMvV4G6wzsw0fv9Q'; // MCrafteris kanalo ID
-      const url = `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${channelId}&key=${apiKey}`;
+      const url = `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${channelId}&key=${apiKey}&_=${new Date().getTime()}`;
 
       try {
-        const response = await fetch(url);
+        const response = await fetch(url, { cache: 'no-store' });
         const data = await response.json();
         const subs = data.items[0].statistics.subscriberCount;
         document.getElementById('subscriber-count').innerText = `Sekėjų skaičius: ${subs}`;
