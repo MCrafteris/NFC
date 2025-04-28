@@ -18,7 +18,7 @@
     }
 
     header {
-      padding: 10px;
+      padding: 20px;
     }
 
     header img {
@@ -31,17 +31,20 @@
 
     .content p {
       max-width: 600px;
-      margin: 10px auto 20px;
+      margin: 0 auto 30px;
       font-size: 18px;
       line-height: 1.6;
       font-weight: bold;
     }
 
+    .links {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
     .links a {
-      display: block;
-      margin: 10px auto;
       padding: 12px 20px;
-      width: 250px;
       background-color: #c4302b;
       color: white;
       text-decoration: none;
@@ -58,6 +61,11 @@
       margin-top: 30px;
     }
 
+    .below img {
+      max-width: 300px;
+      border-radius: 12px;
+    }
+
     .footer {
       margin-top: 40px;
       padding-bottom: 20px;
@@ -69,43 +77,10 @@
       font-weight: bold;
     }
 
-    .subscribe-button {
-      margin: 20px auto;
-    }
-
-    .subscribe-button iframe {
-      display: block;
-      margin: 0 auto;
-    }
-
-    .subscribe-text {
-      font-size: 20px;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-
-    .videos-title {
-      margin-top: 30px;
-      font-size: 22px;
-      font-weight: bold;
-    }
-
-    .videos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+    .subscribers {
       margin-top: 20px;
-    }
-
-    .videos a img {
-      width: 200px;
-      border-radius: 12px;
-      transition: transform 0.3s;
-    }
-
-    .videos a img:hover {
-      transform: scale(1.05);
+      font-size: 20px;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -115,34 +90,18 @@
   </header>
 
   <div class="content">
-    <p><strong>Minecraft nuotykiai!</strong></p>
+    <p><strong>MCrafterio nuotykiai!</strong></p>
 
     <div class="links">
       <a href="https://www.youtube.com/@MCrafteris" target="_blank">YouTube kanalas</a>
     </div>
 
-    <div class="subscribe-button">
-      <div class="subscribe-text">YouTube prenumeratoriai</div>
-      <iframe src="https://www.youtube.com/subscribe_embed?usegapi=1&channelid=UCIsEZzG-uv3k5JojvSF05IQ&layout=default&count=default" style="border:0;width:300px;height:100px;" allowtransparency="true"></iframe>
+    <div class="subscribers">
+      <iframe src="https://socialcounts.org/youtube-live-subscriber-count/UCIsEZzG-uv3k5JojvSF05IQ/embed" style="border:0;width:300px;height:100px;" allowtransparency="true"></iframe>
     </div>
 
-    <div class="videos-title">
-      Mano video
-    </div>
-
-    <div class="videos">
-      <a href="https://www.youtube.com/watch?v=wYYGrnJW9Bs" target="_blank">
-        <img src="https://img.youtube.com/vi/wYYGrnJW9Bs/0.jpg" alt="1 serija">
-      </a>
-      <a href="https://www.youtube.com/watch?v=6uTI8AHnhmA" target="_blank">
-        <img src="https://img.youtube.com/vi/6uTI8AHnhmA/0.jpg" alt="2 serija">
-      </a>
-      <a href="https://www.youtube.com/watch?v=VpolbNjbPSg" target="_blank">
-        <img src="https://img.youtube.com/vi/VpolbNjbPSg/0.jpg" alt="3 serija">
-      </a>
-      <a href="https://www.youtube.com/watch?v=BPi1dQE3NHY" target="_blank">
-        <img src="https://img.youtube.com/vi/BPi1dQE3NHY/0.jpg" alt="LIVE statyba">
-      </a>
+    <div class="below">
+      <img src="https://raw.githubusercontent.com/MCrafteris/NFC/main/mcrafteris%20logo.jpg" alt="MCrafteris Logo">
     </div>
 
     <div class="footer">
