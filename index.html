@@ -73,11 +73,17 @@
       text-decoration: underline;
       font-weight: bold;
     }
+
+    .subscribers {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://raw.githubusercontent.com/TAVOGITHUBVARDAS/REPO-PAVADINIMAS/main/minecraft-logo.png" alt="Minecraft logotipas">
+    <img src="https://raw.githubusercontent.com/MCrafteris/NFC/main/minecraft-logo.png" alt="Minecraft logotipas">
   </header>
 
   <div class="content">
@@ -87,8 +93,12 @@
       <a href="https://www.youtube.com/@MCrafteris" target="_blank">YouTube kanalas</a>
     </div>
 
+    <div class="subscribers" id="subscriber-count">
+      Įėjimas sekėjų skaičiui...
+    </div>
+
     <div class="below">
-      <img src="https://raw.githubusercontent.com/TAVOGITHUBVARDAS/REPO-PAVADINIMAS/main/Chicken_Jockey.png" alt="Chicken Jockey">
+      <img src="https://raw.githubusercontent.com/MCrafteris/NFC/main/mcrafteris%20logo.jpg" alt="MCrafteris Logo">
     </div>
 
     <div class="footer">
@@ -97,5 +107,24 @@
       </a>
     </div>
   </div>
+
+  <script>
+    async function fetchSubscribers() {
+      const apiKey = 'TAVO_API_RAKTAS';
+      const channelId = 'UCIWuIezxMvV4G6wzsw0fv9Q'; // MCrafteris kanalų ID
+      const url = `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${channelId}&key=${apiKey}`;
+
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+        const subs = data.items[0].statistics.subscriberCount;
+        document.getElementById('subscriber-count').innerText = `Sekėjų skaičius: ${subs}`;
+      } catch (error) {
+        document.getElementById('subscriber-count').innerText = 'Nepavyko gauti sekėjų skaičiaus';
+      }
+    }
+
+    fetchSubscribers();
+  </script>
 </body>
 </html>
