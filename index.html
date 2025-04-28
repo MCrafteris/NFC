@@ -75,17 +75,28 @@
       font-weight: bold;
     }
 
-    .arrows {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
+    .subscribers-text {
       margin-top: 10px;
+      font-size: 16px;
+      font-weight: normal;
     }
 
-    .arrows img {
-      width: 40px;
-      height: 40px;
+    .videos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .videos a img {
+      width: 200px;
+      border-radius: 12px;
+      transition: transform 0.3s;
+    }
+
+    .videos a img:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
@@ -103,11 +114,24 @@
 
     <div class="subscribers">
       <iframe src="https://socialcounts.org/youtube-live-subscriber-count/UCIsEZzG-uv3k5JojvSF05IQ/embed" style="border:0;width:300px;height:100px;" allowtransparency="true"></iframe>
-      <div class="arrows">
-        <img src="https://raw.githubusercontent.com/MCrafteris/NFC/main/green-arrow-up.png" alt="Rodyklė į viršų">
-        <span>Sekėjų skaičius realiu laiku</span>
-        <img src="https://raw.githubusercontent.com/MCrafteris/NFC/main/green-arrow-up.png" alt="Rodyklė į viršų">
+      <div class="subscribers-text">
+        Sekėjų skaičius realiu laiku
       </div>
+    </div>
+
+    <div class="videos">
+      <a href="https://www.youtube.com/watch?v=wYYGrnJW9Bs" target="_blank">
+        <img src="https://img.youtube.com/vi/wYYGrnJW9Bs/0.jpg" alt="1 serija">
+      </a>
+      <a href="https://www.youtube.com/watch?v=6uTI8AHnhmA" target="_blank">
+        <img src="https://img.youtube.com/vi/6uTI8AHnhmA/0.jpg" alt="2 serija">
+      </a>
+      <a href="https://www.youtube.com/watch?v=VpolbNjbPSg" target="_blank">
+        <img src="https://img.youtube.com/vi/VpolbNjbPSg/0.jpg" alt="3 serija">
+      </a>
+      <a href="https://www.youtube.com/watch?v=BPi1dQE3NHY" target="_blank">
+        <img src="https://img.youtube.com/vi/BPi1dQE3NHY/0.jpg" alt="LIVE statyba">
+      </a>
     </div>
 
     <div class="footer">
